@@ -1,0 +1,147 @@
+body{
+    background-color: antiquewhite;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    color: red;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.box{
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+    box-shadow: 1px 1px 5px 1px black;
+    overflow: hidden;
+    background: linear-gradient(45deg, black, transparent);
+}
+
+.inputBox{
+    max-width: 30vw;
+    min-width: 300px;
+    border: 2px solid darkgrey;
+    border-radius: 5px;
+    overflow-y: scroll;
+    height: 80vh;
+    font-size: 16px;
+    background: black;
+    color: white;
+}
+
+
+.btnDiv{
+    margin:10px;
+    text-align: center;
+}
+
+.convertBtn{
+    background: linear-gradient(180deg, black, grey);
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 7px 3px black;
+}
+
+.convertBtn:hover{
+    background-color: greenyellow;
+}
+
+.down{
+    display: none;
+}
+
+.buttonsParent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width : 961px) {
+    .inputBox{
+        max-width: 40vw;
+        min-width: 200px;
+    }
+}
+
+@media (max-width:481px) {
+    .inputBox{
+        width: auto;
+        max-width: 100%;
+        height: 50vh;
+    }
+    .down{
+        display: block;
+    }
+    .right{
+        display: none;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .box{
+        height: 50vh;
+    }
+    .buttonsParent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.heading {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.uuid{
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    overflow-y: scroll;
+    height: 30px;
+    background: black;
+    color: white;
+    text-align: center;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+#refresh{
+    border: 1px solid darkgrey;
+    background: black;
+    height: 32px;
+    cursor: pointer;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    display: flex;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 10px
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBedYXBacQgip_IYEcyQYaZ_ylD75lMF0I",
+          authDomain: "encrypted-notes-97c9d.firebaseapp.com",
+          projectId: "encrypted-notes-97c9d",
+          storageBucket: "encrypted-notes-97c9d.appspot.com",
+          messagingSenderId: "24704584454",
+          appId: "1:24704584454:web:6e173a27fa182fee336c87",
+          measurementId: "G-LQHZYQF9ZT"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <h1>Encrypted Notes &#128151;</h1>
+    <div class="container">
+        <input class="uuid" id="uuid" type="number" minlength="5" disabled="true" />
+        <i class="material-icons" id="refresh" onclick="changeUUID()">refresh</i>
+        <!-- <i class="material-icons"  onclick="" >user</i> -->
+    </div>
+
+    <section class="flex">
+        <div class="box">
+            From : <span class="heading" id="fromSpan"></span>
+            <textarea class="inputBox" spellcheck="false" id="convertedFrom"></textarea>
+        </div>
+        <div class="buttonsParent">
+            <div class="btnDiv">
+                <button onClick="convert()" class="convertBtn">Convert <span class="right"> 👉 </span> <span
+                        class="down"> 👇 </span></button>
+            </div>
+            <div class="btnDiv">
+                <button onClick="change(fromSpan.innerHTML,toSpan.innerHTML)" class="convertBtn">Change <span
+                        class="right"> 👈👉 </span> <span class="down"> 👆👇 </span></button>
+            </div>
+        </div>
+        <div class="box">
+            To :<span class="heading" id="toSpan"></span>
+            <!-- <input class="inputBox" /> -->
+
+            <span class="inputBox" id="convertedTo"></span>
+        </div>
+    </section>
+    <script>
+        let fromSpan = document.getElementById('fromSpan')
+        let toSpan = document.getElementById('toSpan')
+        document.getElementById("uuid").value = obj.uuid
+
+        fromSpan.innerHTML = "Alphabets"
+        toSpan.innerHTML = "Emogies"
+    </script>
+</body>
+
+</html>
